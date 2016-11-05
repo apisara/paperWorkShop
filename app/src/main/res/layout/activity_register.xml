@@ -26,6 +26,15 @@
             />
 
         <EditText
+            android:id="@+id/etdist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Distplay Name"
+            android:layout_marginBottom="13dp"
+            android:textColor="#603a00"
+            />
+
+        <EditText
             android:id="@+id/etUser"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -57,7 +66,7 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:text="register"
-            android:layout_marginTop="250dp"
+            android:layout_marginTop="200dp"
             android:background="#a39785"
             android:textColor="#603a00"
             />
