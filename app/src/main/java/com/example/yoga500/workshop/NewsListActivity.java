@@ -8,9 +8,30 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 public class NewsListActivity extends AppCompatActivity {
-
-
     private ListView lvMenu;
+
+    static String[]NameTopic = {"Topic New",
+            "Topic New1",
+            "Topic New2",
+            "Topic New3",
+            "Topic New4",
+            "Topic New5",};
+    static String[] DateName = {
+            "31 ตุลาคม 2559",
+            "31 ตุลาคม 2559",
+            "31 ตุลาคม 2559",
+            "31 ตุลาคม 2559",
+            "31 ตุลาคม 2559",
+            "31 ตุลาคม 2559"};
+    int[] resId={R.drawable.and,
+            R.drawable.and,
+            R.drawable.and,
+            R.drawable.and,
+            R.drawable.and,
+            R.drawable.and,
+            R.drawable.and,};
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,8 +40,8 @@ public class NewsListActivity extends AppCompatActivity {
 
         lvMenu = (ListView) findViewById(R.id.lvMenu);
 
-
         setEvent();
+        cusAdapter();
     }
 
     private void setEvent() {
@@ -34,4 +55,8 @@ public class NewsListActivity extends AppCompatActivity {
         });
     }
 
+    private void cusAdapter() {
+        lvMenu = (ListView) findViewById(R.id.lvMenu);
+        lvMenu.setAdapter(new CustomAdapter(getApplicationContext(),NameTopic,resId,DateName));
+    }
 }
